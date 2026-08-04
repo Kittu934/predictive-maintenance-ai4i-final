@@ -1,0 +1,36 @@
+{
+  "Random Forest": {
+    "n_estimators": 200,
+    "max_depth": null,
+    "min_samples_leaf": 2,
+    "max_features": "sqrt",
+    "class_weight": "balanced",
+    "random_state": 42,
+    "decision_threshold": 0.4339616645685
+  },
+  "SVM": {
+    "kernel": "rbf",
+    "C": 100,
+    "gamma": "scale",
+    "class_weight": "balanced",
+    "probability": true,
+    "random_state": 42,
+    "decision_threshold": 0.34305328623994263
+  },
+  "LSTM": {
+    "implementation": "PyTorch",
+    "input_shape": [
+      1,
+      8
+    ],
+    "hidden_units": 16,
+    "dropout": 0.2,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "epochs": 60,
+    "loss": "BCEWithLogitsLoss with positive-class weight",
+    "optimizer": "Adam",
+    "random_seed": 42,
+    "decision_threshold": 0.9116888642311096
+  }
+}

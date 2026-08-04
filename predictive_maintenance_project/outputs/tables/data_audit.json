@@ -1,0 +1,21 @@
+{
+  "rows": 10000,
+  "columns": 14,
+  "missing_values": 0,
+  "duplicate_rows": 0,
+  "machine_failure_counts": {
+    "0": 9661,
+    "1": 339
+  },
+  "machine_failure_percentages": {
+    "0": 96.61,
+    "1": 3.39
+  },
+  "type_counts": {
+    "L": 6000,
+    "M": 2997,
+    "H": 1003
+  },
+  "train_rows": 8000,
+  "test_rows": 2000
+}

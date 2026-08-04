@@ -1,0 +1,1 @@
+Pinned Streamlit dashboard dependency: 1.49.1

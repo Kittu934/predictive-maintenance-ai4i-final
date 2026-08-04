@@ -1,0 +1,5 @@
+1. Extract the ZIP file.
+2. Double-click setup_windows.bat and wait for it to finish.
+3. Double-click run_dashboard.bat.
+4. The dashboard opens in your browser.
+5. Take a screenshot with Windows + Shift + S.

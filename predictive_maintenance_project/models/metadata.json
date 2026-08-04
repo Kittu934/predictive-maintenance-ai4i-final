@@ -1,0 +1,90 @@
+{
+  "project_title": "Comparative Evaluation of Random Forest, SVM and LSTM for Predictive Maintenance using AI4I 2020",
+  "dataset_file": "ai4i2020.csv",
+  "dataset_rows": 10000,
+  "dataset_columns": 14,
+  "train_test_split": "80:20 stratified, random_state=42",
+  "positive_class": "Machine failure = 1",
+  "features": [
+    "Type",
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "excluded_columns": [
+    "UDI",
+    "Product ID",
+    "TWF",
+    "HDF",
+    "PWF",
+    "OSF",
+    "RNF"
+  ],
+  "python_version": "3.13.5",
+  "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+  "processor": "",
+  "packages": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.8.0",
+    "torch": "2.10.0+cpu",
+    "shap": "0.50.0",
+    "matplotlib": "3.10.8",
+    "joblib": "1.5.3",
+    "psutil": "7.2.2",
+    "streamlit": "1.49.1 (pinned dashboard dependency)"
+  },
+  "note": "LSTM implemented in PyTorch. AI4I rows are not genuine machine-specific sequences; each observation is reshaped as a one-step sequence and interpreted as an exploratory deep-learning comparator.",
+  "metrics": [
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.98,
+      "Precision": 0.71875,
+      "Recall": 0.6764705882352942,
+      "F1-score": 0.696969696969697,
+      "AUC-ROC": 0.9614465351357935,
+      "Decision threshold": 0.4339616645685
+    },
+    {
+      "Model": "SVM",
+      "Accuracy": 0.971,
+      "Precision": 0.5862068965517241,
+      "Recall": 0.5,
+      "F1-score": 0.5396825396825397,
+      "AUC-ROC": 0.9549689440993788,
+      "Decision threshold": 0.34305328623994263
+    },
+    {
+      "Model": "LSTM",
+      "Accuracy": 0.971,
+      "Precision": 0.5862068965517241,
+      "Recall": 0.5,
+      "F1-score": 0.5396825396825397,
+      "AUC-ROC": 0.9580516989404457,
+      "Decision threshold": 0.9116888642311096
+    }
+  ],
+  "efficiency": [
+    {
+      "Model": "Random Forest",
+      "Training time (s)": 0.40179312299983394,
+      "Inference time for 2,000 cases (s)": 0.0462902239999039,
+      "Peak memory increase (MB)": 9.105
+    },
+    {
+      "Model": "SVM",
+      "Training time (s)": 1.3755035100000441,
+      "Inference time for 2,000 cases (s)": 0.03887618399994608,
+      "Peak memory increase (MB)": 34.398
+    },
+    {
+      "Model": "LSTM",
+      "Training time (s)": 7.674406896999926,
+      "Inference time for 2,000 cases (s)": 0.0005647010000302544,
+      "Peak memory increase (MB)": 261.961
+    }
+  ],
+  "streamlit_note": "Streamlit 1.49.1 is pinned for reproducible dashboard deployment; model training and evaluation were completed independently of the dashboard runtime."
+}
